@@ -1,0 +1,43 @@
+{
+  "release_id": "REG-2026-10-20-A",
+  "exported_at": "2026-10-20T06:00:00Z",
+  "source_name": "Cedar Registry (fictional)",
+  "records": [
+    {
+      "source_product_id": "PRD-001",
+      "source_pack_id": "PAK-001",
+      "gtin": "05901234567893",
+      "name": "Demo Product Alpha",
+      "strength": "10 mg",
+      "form": "tablet",
+      "status": "ACTIVE"
+    },
+    {
+      "source_product_id": "PRD-002",
+      "source_pack_id": "PAK-002",
+      "gtin": "05901234567909",
+      "name": "Demo Product Beta",
+      "strength": "5 mg",
+      "form": "capsule",
+      "status": "ACTIVE"
+    },
+    {
+      "source_product_id": "PRD-003",
+      "source_pack_id": "PAK-003",
+      "gtin": "05901234567916",
+      "name": "Demo Product Gamma",
+      "strength": "2 mg",
+      "form": "solution",
+      "status": "WITHDRAWN"
+    },
+    {
+      "source_product_id": "PRD-004",
+      "source_pack_id": "PAK-004",
+      "gtin": "05901234567923",
+      "name": "Demo Product Delta",
+      "strength": "20 mg",
+      "form": "tablet",
+      "status": "ACTIVE"
+    }
+  ]
+}

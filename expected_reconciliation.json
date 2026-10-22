@@ -1,0 +1,25 @@
+{
+  "evaluation_date": "2026-10-22",
+  "registry": {
+    "total": 4,
+    "active": 3,
+    "withdrawn": 1
+  },
+  "coverage": {
+    "total": 6,
+    "matched_nonconflicting": 3,
+    "quarantined_unmatched": 1,
+    "quarantined_overlapping": 2,
+    "suppressed_expired": 1,
+    "suppressed_withdrawn": 1,
+    "publishable_current": 1
+  },
+  "publishable_row_ids": [
+    "COV-001"
+  ],
+  "quarantined_row_ids": [
+    "COV-004",
+    "COV-005",
+    "COV-006"
+  ]
+}
