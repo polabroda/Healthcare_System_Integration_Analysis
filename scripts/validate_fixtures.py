@@ -78,25 +78,20 @@ def check():
         else:
             published.append(row["coverage_row_id"])
 
-    actual = {
-        "evaluation_date": today.isoformat(),
+    actual = {"evaluation_date": today.isoformat(),
         "registry": {
             "total": len(packs),
             "active": sum(p["status"] == "ACTIVE" for p in packs),
-            "withdrawn": sum(p["status"] == "WITHDRAWN" for p in packs),
-        },
-        "coverage": {
-            "total": len(coverage),
+            "withdrawn": sum(p["status"] == "WITHDRAWN" for p in packs),},
+        "coverage": {"total": len(coverage),
             "matched_nonconflicting": len(accepted),
             "quarantined_unmatched": len(unmatched),
             "quarantined_overlapping": len(overlaps),
             "suppressed_expired": len(expired),
             "suppressed_withdrawn": len(withdrawn),
-            "publishable_current": len(published),
-        },
+            "publishable_current": len(published),},
         "publishable_row_ids": sorted(published),
-        "quarantined_row_ids": sorted(set(unmatched) | overlaps),
-    }
+        "quarantined_row_ids": sorted(set(unmatched) | overlaps),}
     assert actual == expected, "Fixture oracle mismatch:\nACTUAL " + json.dumps(actual, indent=2) + "\nEXPECTED " + json.dumps(expected, indent=2)
     assert sum([len(accepted),len(unmatched),len(overlaps)]) == len(coverage)
     print("PASS: fictional HIS fixture consistency check")
